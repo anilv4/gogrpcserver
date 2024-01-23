@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package hostname;
+
+option go_package = "gogrpcserver/pb";
+
+service HostnameGetter {
+  rpc GetHostname (HostnameRequest) returns (HostnameReply) {}
+}
+
+message HostnameRequest {}
+
+message HostnameReply {
+  string message = 1;
+}
